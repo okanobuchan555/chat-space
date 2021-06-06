@@ -1,0 +1,20 @@
+.chat-main
+  .group-info
+    .top-titles
+      .theme test
+      .name Membar : masa
+    = link_to '#', class: "top-edit" do 
+      Edit
+  .message-list
+    .timeline
+      .content1
+        .name masa
+        .update 2019/11/20(Wed) 17:43:01
+      .content2 おはよう！
+  .message-form
+    .content
+      %input{class: "inputContent", type: "text", placeholder: "type a message"} 
+      %label{class: "inputImage"}
+        = icon('far', 'image')
+        %input{class: "filechoice", type: "file"}
+    .send-button Send
