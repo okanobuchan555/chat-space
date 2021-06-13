@@ -3,9 +3,12 @@
     .top-items
       .name masa
       %ul.icons
-        %li.icons_strong
-          = icon('far', 'edit')
-          = icon('fas', 'cog')
+        %li
+          = link_to "#" do
+            = icon('far', 'edit')
+        %li
+          = link_to "#" do
+            = icon('fas', 'cog')
   .group-list
     .group 
       .group-name techcamp

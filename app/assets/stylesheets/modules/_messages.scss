@@ -25,9 +25,11 @@
       width: 60px;
       display: flex;
       justify-content: flex-end;
-      .icons_strong{
+      li {
         margin-left: 5px;
-        color: #ffffff;
+        a {
+          color: #ffffff;
+        }
       } 
     }
   }
@@ -35,21 +37,18 @@
  .group-list{
    height: calc(100vh - 100px);
    background-color: #2f3e51;
+   padding: 20px;
+   box-sizing: border-box;
   .group{
    .group-name{
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 20px;
-    padding-bottom: 5px;
-    color: #ffffff;
-    font-size: 15px;
+     padding-bottom: 5px;
+     color: #ffffff;
+     font-size: 15px;
    }
    .group-message{
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 40px;
-    color: #ffffff;
-    font-size: 11px;
+     padding-bottom: 40px;
+     color: #ffffff;
+     font-size: 11px;
    }
   }
  } 
