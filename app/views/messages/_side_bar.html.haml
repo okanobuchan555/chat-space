@@ -1,19 +1,20 @@
 .side-bar
   .user-name
     .top-items
-      .name masa
+      .name
+        = current_user.name
       %ul.icons
         %li
           = link_to "#" do
             = icon('far', 'edit')
         %li
-          = link_to "#" do
+          = link_to edit_user_path(current_user) do
             = icon('fas', 'cog')
   .group-list
-    .group 
-      .group-name techcamp
-      .group-message まだメッセージがありません
     .group
-      .group-name techcamp
-      .group-message まだメッセージがありません
+      = link_to "#" do
+      .group-name 
+        グループ名
+      .group-message 
+        最新のメッセージ
   
