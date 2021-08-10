@@ -36,6 +36,7 @@
  }
  .group-list{
    height: calc(100vh - 100px);
+   overflow: scroll;
    background-color: #2f3e51;
    padding: 20px;
    box-sizing: border-box;
@@ -88,12 +89,13 @@
     text-decoration: none;
   }
  }    
-
+ .MessageField{
+  height: calc(100vh - 100px - 90px);
+  overflow: scroll;
+ }
  .message-list{
-   height: calc(100vh - 100px - 90px);
    background-color: #fafafa;
-  .timeline{
-    padding-left: 40px;
+   padding-left: 40px;
    .content1{
      padding-top: 35px;
      display: flex;
@@ -113,7 +115,6 @@
      color: #434A54;
      padding-bottom: 46px;
    }
-  }
  }
  .message-form{
    height: 90px;
@@ -121,8 +122,9 @@
    padding-left: 40px;
    padding-right: 40px;
    display: flex;
+   box-sizing: border-box;
    align-items: center;
-  .content{
+  .contents{
     height: 50px;
     background-color: #ffffff;
     width: calc(100vw - 300px - 195px);
@@ -143,21 +145,23 @@
     align-items: center;
     right: 10px;
     font-size: 25px;
+    cursor: pointer;
     .filechoice{
       display: none;
     }
    }
   }
   .send-button{
+    width: 100px;
     height: 50px;
     margin-left: 15px;
-    padding-left: 30px;
-    padding-right: 30px;
-    display: flex;
+    padding: 0 30px;
     align-items: center;
     background-color: #38aef0;
     font-size: 16px;
     color: #ffffff;
+    display: flex;
+    cursor: pointer;
   }
  }
 }
