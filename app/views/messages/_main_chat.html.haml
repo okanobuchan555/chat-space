@@ -1,20 +1,22 @@
 .chat-main
   .group-info
     .top-titles
-      .theme test
-      .name Membar : masa
-    = link_to '#', class: "top-edit" do 
+      .group-name
+        = @group.name
+      .name
+        Membar :  
+        - @group.users.each_with_index do |user, i|
+          - unless i.zero?
+            &thinsp;
+          = user.name
+    = link_to edit_group_path(@group), class: "top-edit" do
       Edit
-  .message-list
-    .timeline
-      .content1
-        .name masa
-        .update 2019/11/20(Wed) 17:43:01
-      .content2 おはよう！
-  .message-form
-    .content
-      %input{class: "inputContent", type: "text", placeholder: "type a message"} 
-      %label{class: "inputImage"}
+  .MessageField
+    = render @messages
+  = form_with model: [@group, @message], html: {class: "message-form"}, local: true do |f|
+    .contents
+      = f.text_field :content, class: 'inputContent', placeholder: 'type a message'
+      = f.label :image, class: 'inputImage' do
         = icon('far', 'image')
-        %input{class: "filechoice", type: "file"}
-    .send-button Send
+        = f.file_field :image, class: 'filechoice'
+    = f.submit 'Send', class: 'send-button'
