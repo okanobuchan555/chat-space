@@ -55,7 +55,6 @@ $(function(){
       contentType: false
     })
     .done(function(data){
-      console.log(data)
       let html = buildHTML(data);
       $('.MessageField').append(html);
       $('.MessageField').animate({ scrollTop: $('.MessageField')[0].scrollHeight});
