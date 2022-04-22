@@ -64,7 +64,8 @@ $(function(){
       $('.MessageField').animate({ scrollTop: $('.MessageField')[0].scrollHeight});
       $(".send-button").prop("disabled", false);
     })
-    .fail(function() {
+    .fail(function(data) {
+      console.log(data)
       alert("メッセージ送信に失敗しました");
       $(".send-button").prop("disabled", false);
     });
